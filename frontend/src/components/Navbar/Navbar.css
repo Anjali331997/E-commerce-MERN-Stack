@@ -21,7 +21,7 @@
     align-items: center;
     list-style: none;
     gap: 50px;
-    color: var(--grey);
+    color: var(--grey) !important;
     font-size: 20px;
     font-weight: 500;
 }
@@ -37,6 +37,7 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
+    color: var(--grey) !important;
     cursor: pointer;
 }
 

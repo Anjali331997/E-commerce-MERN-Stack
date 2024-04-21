@@ -3,6 +3,7 @@ import './Navbar.css'
 
 import logo from '../Assests/logo.png'
 import cart_icon from '../Assests/cart_icon.png'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     const [menu, setMenu] = useState("shop")
@@ -15,20 +16,36 @@ const Navbar = () => {
             <ul className='nav-menu'>
                 <li onClick={() => {
                     setMenu("shop")
-                }}>Shop {menu === "shop" ? <hr /> : <></>}</li>
+                }}>
+                    <Link to='/' style={{textDecoration:'none',color:'var(--grey)'}}>Shop</Link>
+                    {menu === "shop" ? <hr /> : <></>}
+                </li>
                 <li onClick={() => {
                     setMenu("mens")
-                }}>Men {menu === "mens" ? <hr /> : <></>}</li>
+                }}>
+                    <Link to='/mens' style={{textDecoration:'none',color:'var(--grey)'}}>Men</Link>
+                    {menu === "mens" ? <hr /> : <></>}
+                </li>
                 <li onClick={() => {
                     setMenu("womens")
-                }}>Women {menu === "womens" ? <hr /> : <></>}</li>
+                }}>
+                    <Link to='/womens' style={{textDecoration:'none',color:'var(--grey)'}}>Women</Link>
+                    {menu === "womens" ? <hr /> : <></>}
+                </li>
                 <li onClick={() => {
                     setMenu("kids")
-                }}>Kids {menu === "kids" ? <hr /> : <></>}</li>
+                }}>
+                    <Link to='/kids' style={{textDecoration:'none',color:'var(--grey)'}}> Kids</Link>
+                    {menu === "kids" ? <hr /> : <></>}
+                </li>
             </ul>
             <div className="nav-login-cart">
-                <button>Login</button>
-                <img src={cart_icon} alt="" />
+                <Link to='/login'><button>Login</button></Link>
+
+                <Link to='/cart'>
+                    <img src={cart_icon} alt="" />
+                </Link>
+
                 <div className="nav-cart-count">0</div>
             </div>
         </div>
