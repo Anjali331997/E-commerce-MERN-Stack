@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'poppins';
 }
 
 code {
@@ -15,4 +16,6 @@ code {
 :root{
   --black:#171717;
   --grey:#626262;
+  --white:white;
+  --red:red
 }
