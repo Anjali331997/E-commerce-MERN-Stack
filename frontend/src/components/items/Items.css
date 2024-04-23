@@ -1,5 +1,6 @@
 .item{
-    width: 350px;
+    width: 250px;
+    /* border: 1px red solid; */
 }
 
 .item p{
@@ -26,4 +27,8 @@
 .item:hover{
     transform: scale(1.05);
     transition: 0.6s;
+}
+
+.item img{
+    width: 100%;
 }
