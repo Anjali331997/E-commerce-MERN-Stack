@@ -2,6 +2,7 @@
     display: block;
     margin: 30px auto;
     width: 82%;
+    /* border: 1px solid salmon; */
 }
 
 .shopcategory-indexsort{
@@ -20,5 +21,11 @@
     font-weight: 600;
 }
 .shopcategory-products{
-    
+    /* border: 1px solid saddlebrown; */
+    margin: auto;
+    width: 82%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-between;
+    gap: 30px;
 }
