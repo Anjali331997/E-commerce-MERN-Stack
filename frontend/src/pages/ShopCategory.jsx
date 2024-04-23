@@ -6,12 +6,12 @@ import Item from '../components/items/Items'
 
 const ShopCategory = (props) => {
 
-  const {all_product}  = useContext(ShopContext);
+  const { all_product } = useContext(ShopContext);
   console.log(all_product);
 
   return (
     <div className='shop-category'>
-      <img src={props.banner} alt="banner" />
+      <img className='shopcategory-banner' src={props.banner} alt="banner" />
       <div className="shopcategory-indexsort">
 
         <p>
@@ -24,9 +24,15 @@ const ShopCategory = (props) => {
           {
             all_product.map((item, i) => {
               if (props.category === item.category) {
-                return <Item  key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price}/>
+                return <Item
+                  key={i}
+                  id={item.id}
+                  name={item.name}
+                  image={item.image}
+                  new_price={item.new_price}
+                  old_price={item.old_price} />
               }
-              else{
+              else {
                 return null;
               }
             })
