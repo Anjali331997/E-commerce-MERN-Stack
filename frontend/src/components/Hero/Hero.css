@@ -1,5 +1,5 @@
 .hero {
-    height: 100vh;
+    height: 80vh;
     background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
     display: flex;
     border: 1px purple solid;
@@ -63,7 +63,8 @@
 } 
 
 .hero-right img{
-    width: 70%;
+    width: 60%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
