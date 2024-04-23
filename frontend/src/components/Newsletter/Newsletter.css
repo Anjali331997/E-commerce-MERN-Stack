@@ -14,11 +14,40 @@
 
 .newsletter h1{
     color: var(--grey);
-    font-size: 55px;
+    font-size: 40px;
     font-weight: 500px;
 }
 
 .newsletter p{
     color: var(--grey);
     font-size: 20px;
+}
+
+.newsletter div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    width: 630px;
+    height: 70px;
+    border-radius: 80px;
+    border: 1px solid rgb(236, 205, 205);
+}
+
+.newsletter input{
+    width: 500px;
+    margin-left: 30px;
+    border: none;
+    outline: none;
+    color: var(--grey);
+    font-family: Poppins;
+    font-size: 16px;
+}
+
+.newsletter div button{
+    width: 210px;
+    height: 70px;
+    border-radius: 80px;
+    background: black;
+    color: var(--white);
 }
