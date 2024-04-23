@@ -1,4 +1,5 @@
 .offers{
+    /* border: 1px yellow solid; */
     width: 65%;
     height: 60vh;
     display: flex;
@@ -33,4 +34,26 @@
     height: 50px;
     background-origin: 100px;
     background-color: var(--red);
+    border: none;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.offers-right{
+    /* border: 1px red solid; */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.offers-right img{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* border: 1px rgb(144, 20, 175) solid; */
 }
