@@ -5,7 +5,7 @@ import start_dull_icon from '../Assests/star_dull_icon.png'
 
 const ProductDisplay = ({ product }) => {
   return (
-    <div className='productdisplay'>
+    <div className='product-display'>
       <div className="product-display-left">
         <div className="product-display-img-list">
           <img src={product.image} alt="product-img" />
@@ -13,10 +13,11 @@ const ProductDisplay = ({ product }) => {
           <img src={product.image} alt="product-img" />
           <img src={product.image} alt="product-img" />
         </div>
-      </div>
-      <div className="product-display-img">
+        <div className="product-display-img">
         <img src={product.image} className='product-display-main-img' alt="" />
       </div>
+      </div>
+      
       <div className="product-display-right">
         <h1>{product.name}</h1>
         <div className="productdisplay-right-start">

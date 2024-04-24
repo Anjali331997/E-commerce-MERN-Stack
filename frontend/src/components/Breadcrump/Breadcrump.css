@@ -11,5 +11,13 @@ pages above the current page
 eg: Home/women/jeans/momjeans
 */
 
-
+.breadcrump{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--grey);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 30px 130px;
+}
 
