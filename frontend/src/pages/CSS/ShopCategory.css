@@ -34,8 +34,9 @@
     justify-content: center;
     align-items: center;
     margin: 100px auto;
-    height: 69px;
+    width: 200px;
+    height: 49px;
     border-radius: 100px;
-    background-color: var(--white);
-    color: var(--grey);  
+    background-color: var(--grey);
+    color: var(--white);  
 }
