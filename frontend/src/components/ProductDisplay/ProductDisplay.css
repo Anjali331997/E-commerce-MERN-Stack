@@ -22,6 +22,9 @@
 .product-display-main-img {
     width: 486px;
     height: 500px;
+    object-position: center;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .product-display-right {
