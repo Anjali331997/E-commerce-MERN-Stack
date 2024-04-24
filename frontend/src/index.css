@@ -21,4 +21,6 @@ code {
   --grey:#626262;
   --white:white;
   --red:rgb(235, 62, 62);
+  --white-bg:#fbdffd;
+  --grey-light:rgb(187, 187, 187);
 }
