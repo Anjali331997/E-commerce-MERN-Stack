@@ -20,7 +20,7 @@ const ProductDisplay = ({ product }) => {
       
       <div className="product-display-right">
         <h1>{product.name}</h1>
-        <div className="productdisplay-right-start">
+        <div className="product-display-right-stars">
           <img src={start_icon} alt="" />
           <img src={start_icon} alt="" />
           <img src={start_icon} alt="" />

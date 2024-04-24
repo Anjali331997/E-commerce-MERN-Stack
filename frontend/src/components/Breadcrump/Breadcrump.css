@@ -19,5 +19,6 @@ eg: Home/women/jeans/momjeans
     font-size: 16px;
     font-weight: 600;
     margin: 30px 130px;
+    text-transform: capitalize;
 }
 
