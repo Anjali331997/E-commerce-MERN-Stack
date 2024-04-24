@@ -55,7 +55,7 @@ const ProductDisplay = ({ product }) => {
         </div>
         <button>Add to cart</button>
         <p className='product-display-right-category'>
-         <span> Category: </span>Women, T-Shirt, Crop top
+         <span> Category: </span>{product.category}, Cotten, Streachable
         </p>
         <p className='product-display-right-category'>
          <span>Tags: </span>Modern, Latest

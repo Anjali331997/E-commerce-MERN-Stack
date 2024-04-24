@@ -95,6 +95,7 @@
 }
 .product-display-right-category{
     margin-top: 10px;
+    text-transform: capitalize;
 }
 .product-display-right-category span{
     font-weight: 600;
