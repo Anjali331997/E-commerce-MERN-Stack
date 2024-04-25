@@ -9,7 +9,7 @@ const DescriptionBox = () => {
                     Description
                 </div>
                 <div className="descriptionbox-nav-box fade">
-                    Reviews
+                    Reviews(122)
                 </div>
             </div>
             <dib className="descriptionbox-description">
