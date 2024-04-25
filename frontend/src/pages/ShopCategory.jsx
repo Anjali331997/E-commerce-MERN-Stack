@@ -7,7 +7,7 @@ import Item from '../components/items/Items'
 const ShopCategory = (props) => {
 
   const { all_product } = useContext(ShopContext);
-  console.log(all_product);
+  // console.log(all_product);
 
   return (
     <div className='shop-category'>

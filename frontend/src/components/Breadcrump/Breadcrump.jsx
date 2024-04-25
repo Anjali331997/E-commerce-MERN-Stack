@@ -4,7 +4,7 @@ import arrow_icon from '../Assests/breadcrum_arrow.png'
 
 const Breadcrump = (props) => {
     const { product } = props;
-    console.log(product)
+    // console.log(product)
     return (
         <div className='breadcrump'>
             HOME
