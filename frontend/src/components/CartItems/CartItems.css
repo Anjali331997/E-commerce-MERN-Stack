@@ -54,3 +54,61 @@
     margin-right: 200px;
     gap: 40px;
 }
+
+.cartitems-total-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+.cartitems-total button {
+    width: 262px;
+    height: 58px;
+    outline: none;
+    border: none;
+    background: var(--red);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cartitems-promocode {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 600;
+    /* border: 1px black solid; */
+}
+
+.cartitems-promocode p {
+    color: var(--grey);
+    padding-left: 20px;
+}
+
+.cartitem-promobox {
+    width: 504px;
+    margin: 15px;
+    padding-left: 20px;
+    height: 58px;
+    background: var(--grey-light);
+    color: var(--black);
+    /* border: 1px rgb(16, 98, 165) solid; */
+}
+
+.cartitem-promobox input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    width: 330px;
+    height: 50px;
+}
+
+.cartitem-promobox button {
+    width: 170px;
+    height: 58px;
+    font-size: 16px;
+    background: var(--black);
+    color: var(--white);
+    cursor: pointer;
+}
