@@ -31,8 +31,18 @@
 }
 
 .item img{
-    width: 100%;
+    width: 250px;
     height: 300px;
     object-fit:scale-down;
     object-position: center;
+}
+
+@media(max-width:1280px){
+    .item{
+        width: 220px;
+        font-size: 14px;
+    }
+    .item img{
+        width: 220px;
+    }
 }
