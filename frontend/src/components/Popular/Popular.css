@@ -17,8 +17,8 @@
 .line{
     width: 200px;
     /* border:none; */
-    height: 3px;
-    padding: 3px;
+    height: 2px;
+    padding: 2px;
     border-radius: 10px;
     background: var(--grey);
 }
@@ -39,7 +39,8 @@
     }
     .line{
         width: 160px;
-        height: 4px;
+        height: 2px;
+        padding: 2px;
     }
     .popular-item{
         gap: 20px;
@@ -55,10 +56,27 @@
     }
     .line{
         width: 120px;
-        height: 3px;
+        height: 1px;
+        padding: 1px;
     }
     .popular-item{
         gap: 15px;
         margin-top: 20px;
+    }
+}
+@media(max-width:800px){
+    .popular{
+        gap: 6px;
+    }
+    .popular h1{
+        font-size: 20px;
+    }
+    .line{
+        width: 100px;
+        height: 1px;
+        padding: 1px;
+    }
+    .popular-item{
+        gap: 5px;
     }
 }
