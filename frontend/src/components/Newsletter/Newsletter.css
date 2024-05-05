@@ -51,3 +51,11 @@
     background: black;
     color: var(--white);
 }
+
+@media(max-width:1280px){
+   .newsletter{
+    padding: 0px 80px;
+    margin-bottom: 120px;
+    gap: 20px;
+   }
+}
