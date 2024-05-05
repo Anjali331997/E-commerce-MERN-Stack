@@ -55,7 +55,7 @@
 @media(max-width:1280px) {
     .newsletter {
         padding: 0px 80px;
-        margin-bottom: 120px;
+        margin-bottom: 50px;
         gap: 20px;
     }
 
@@ -82,7 +82,7 @@
 
 @media(max-width:1024px) {
     .newsletter {
-        margin-bottom: 60px;
+        margin-bottom: 10px;
         gap: 10px;
     }
     .newsletter h1 {
@@ -108,7 +108,7 @@
 
 @media(max-width:800px) {
     .newsletter {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         height: 35vh;
         gap: 10px;
     }
