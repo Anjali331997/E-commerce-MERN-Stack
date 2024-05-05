@@ -43,3 +43,21 @@
     background-color: var(--grey);
     color: var(--white);  
 }
+
+@media(max-width:1280px){
+    .shopcategory-banner{
+        margin: 20px auto;
+        width: 90%;
+    }
+    .shopcategory-indexsort{
+        width: 90%;
+        margin: auto;
+    }
+    .shopcategory-sort{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .shopcategory-indexsort p{
+        font-size: 12px;
+    }
+}
