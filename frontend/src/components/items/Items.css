@@ -1,6 +1,10 @@
 .item {
     width: 250px;
+    height: 380px;
     gap: 10px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
     /* border: 1px red solid; */
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -35,9 +39,10 @@
 }
 
 .item img {
-    width: 250px;
-    /* height: 300px; */
-    object-fit: scale-down;
+    width: 100%;
+    height: 65%;
+    /* border: 1px rgb(21, 32, 131) solid; */
+    object-fit:fill;
     object-position: center;
 }
 
