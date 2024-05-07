@@ -40,9 +40,9 @@
 
 .item img {
     width: 100%;
-    height: 65%;
+    height: 70%;
     /* border: 1px rgb(21, 32, 131) solid; */
-    object-fit:fill;
+    object-fit:scale-down;
     object-position: center;
 }
 

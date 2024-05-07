@@ -91,3 +91,19 @@
         font-size: 13px;
     }
 }
+
+@media(max-width:500px){
+    /* .shopcategory-banner{
+        width: 95%;
+    } */
+    .shopcategory-products{
+        grid-template-columns: 1fr 1fr;
+        /* width: 95%; */
+    }
+    .shopcategory-loadmore{
+        margin: 60px auto;
+        width: 150px;
+        height: 40px;
+        font-size: 13px;
+    }
+}
