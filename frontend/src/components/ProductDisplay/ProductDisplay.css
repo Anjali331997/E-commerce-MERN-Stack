@@ -336,4 +336,21 @@
     .product-display-right-stars img{
         width: 15px;
     }
+    .product-display-right-sizes{
+        gap: 10px;
+        margin: 20px 0px;
+    }
+    .product-display-right-sizes div{
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    .product-display-right button{
+        width: 130px;
+        font-size: 15px;
+        padding: 12px 0px;
+    }
+    .product-display-right-category{
+        font-size: 16px;
+    }
+    
 }
