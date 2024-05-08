@@ -144,6 +144,32 @@
         gap: 80px;
     }
     .cartitems-total{
-        margin: 0px;
+        margin: 0;
+    }
+    .cartitems-total button{
+        max-width: 200px;
+        height: 45px;
+        font-size: 13px;
+    }
+    .cartitem-promobox{
+        width: auto;
+        max-width: 500px;
+    }
+    .cartitem-promobox input{
+        width: 100%;
+    }
+    .cartitem-promobox button{
+        width: 120px;
+        margin-left: -125px;
+    }
+}
+@media(max-width:500px){
+    .cartitems-format-main{
+        display: none;
+        grid-template-columns: 0.5fr 3fr 0.5fr;
+        gap: 10px;
+    }
+    .cartitems-format{
+        display: grid;
     }
 }
