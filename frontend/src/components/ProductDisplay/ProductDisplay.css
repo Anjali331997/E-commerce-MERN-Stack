@@ -100,3 +100,28 @@
 .product-display-right-category span{
     font-weight: 600;
 }
+@media(max-width:1280px){
+    .product-display{
+        margin: 0px 60px
+    }
+    .product-display-left{
+        gap: 10px;
+    }
+    .product-display-img-list{
+       gap: 10px; 
+    }
+    .product-display-img-list img{
+        height: 120px;
+    }
+    .product-display-main-img{
+        width: auto;
+        height: 510px;
+    }
+    .product-display-right{
+        margin: 0px 30px;
+    }
+    .product-display-right h1{
+        font-size: 22px;
+    }
+    
+}

@@ -33,4 +33,17 @@ eg: Home/women/jeans/momjeans
        font-size: 13px; 
     }
 }
+@media(max-width:800px){
+    .breadcrump{
+       margin: 30px 10px;
+       font-size: 11px; 
+    }
+}
+@media(max-width:500px){
+    .breadcrump{
+
+       font-size: 9px; 
+    }
+}
+
 
