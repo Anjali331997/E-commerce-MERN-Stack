@@ -17,7 +17,9 @@ const ProductDisplay = ({ product }) => {
           <img src={product.image} alt="product-img" />
         </div>
         <div className="product-display-img">
-        <img src={product.image} className='product-display-main-img' alt="" />
+        <img src={product.image}
+         className='product-display-main-img'
+          alt="" />
       </div>
       </div>
       
