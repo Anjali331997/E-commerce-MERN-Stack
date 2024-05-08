@@ -21,4 +21,16 @@ eg: Home/women/jeans/momjeans
     margin: 30px 130px;
     text-transform: capitalize;
 }
+@media(max-width:1280px){
+    .breadcrump{
+       margin: 30px 50px;
+       font-size: 14px; 
+    }
+}
+@media(max-width:1024px){
+    .breadcrump{
+       margin: 30px 30px;
+       font-size: 13px; 
+    }
+}
 
