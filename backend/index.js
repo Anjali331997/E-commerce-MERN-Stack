@@ -12,6 +12,10 @@ app.use(cors())
 
 const app = express();
 
+app.get('/',(req,res)=>{
+    res.status(200).send({message:"Testing the backend"})
+})
+
 app.listen(port,()=>{
     console.log("Listening to port:",port)
 })
