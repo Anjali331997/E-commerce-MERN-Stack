@@ -13,6 +13,7 @@ const LoginSignup = () => {
 
         </div>
         <button>Continue</button>
+        
         <p className='loginsignup-login'>Allready have an account?
           <span>Login</span>
         </p>
