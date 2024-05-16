@@ -1,5 +1,4 @@
 const express = require('express');
-const mongoose = require('mongoose')
 const jwt = require('jsonwebtoken')
 const multer = require('multer')
 const cors = require('cors')
