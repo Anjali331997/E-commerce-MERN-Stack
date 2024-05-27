@@ -14,8 +14,7 @@ app.get('/', (req, res) => {
     res.status(200).send({ message: "Testing the backend:E-commerce" })
 })
 
-//Image Storage Engine
-
+//Image Storage Engine 
 const storage = multer.diskStorage({
     destination: './upload/images',
     filename: (req, file, cb) => {
