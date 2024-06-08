@@ -35,7 +35,7 @@ app.post("/upload", upload.single('product'), (req, res) => {
     })
 })
 
-//Product routes
+
 //adding products
 app.post('/addproduct', async (req, res) => {
      //logic to create the id by itself.
@@ -88,6 +88,8 @@ app.get('/allproducts',async(req,res)=>{
     console.log("all products fetched")
     res.status(200).json(products)
 })
+
+
 
 app.listen(port, () => {
     console.log("Listening to port:", port)
