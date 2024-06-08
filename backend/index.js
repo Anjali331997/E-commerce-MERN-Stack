@@ -8,7 +8,7 @@ require('dotenv').config();
 require('./config/db');
 
 
-const port = process.env.PORT||8000;
+const port = process.env.PORT || 8000;
 const app = express();
 app.use(express.json())
 app.use(cors())
@@ -35,9 +35,26 @@ app.post("/upload", upload.single('product'), (req, res) => {
     })
 })
 
+//Product routes
+//adding products
 app.post('/addproduct', async (req, res) => {
+     //logic to create the id by itself.
+    let products = await Product.find({});
+    let new_id;
+
+    if (products.length > 0) {
+        //getting last element from products array
+        let last_product_array = products.slice(-1);
+        let last_product = last_product_array[0];
+        //adding one to the id of last product and assign it into new_id
+        new_id = last_product.id + 1;
+    }
+    else{
+        new_id=1;
+    }
+
     const new_product = new Product({
-        id: req.body.id,
+        id: new_id,
         name: req.body.name,
         image: req.body.image,
         category: req.body.category,
@@ -47,6 +64,18 @@ app.post('/addproduct', async (req, res) => {
     console.log(new_product);
     await new_product.save();
     console.log("Product Saved")
+    res.status(200).json({
+        success: true,
+        name: req.body.name
+    })
+})
+
+//deleting products
+app.post('/deleteproduct',async (req,res)=>{
+    await Product.findOneAndDelete({
+        id:req.body.id
+    })
+    console.log("Item Removed");
     res.status(200).json({
         success:true,
         name:req.body.name
