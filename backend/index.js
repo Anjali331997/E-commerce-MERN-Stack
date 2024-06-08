@@ -6,11 +6,13 @@ const path = require('path')
 const Product = require('./modals/Product')
 require('dotenv').config();
 require('./config/db');
+const bodyParser = require('body-parser');
 
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT;
 const app = express();
-app.use(express.json())
+app.use(bodyParser.json({ limit: '50mb' }));
+app.use(bodyParser.urlencoded({ limit: '100mb', extended: true }));
 app.use(cors())
 
 app.get('/', (req, res) => {
@@ -29,9 +31,11 @@ const upload = multer({ storage: storage })
 //Creating upload Endpoint for images
 app.use('/images', express.static('upload/images'))
 app.post("/upload", upload.single('product'), (req, res) => {
+    console.log(req);
     res.json({
         success: 1,
-        image_url: `http://localhost:${port}/images/${req.file.filename}`
+        image_url: `http://localhost:${port}/images/${req.file.filename}`,
+        statusCheck:"checking"
     })
 })
 
@@ -61,7 +65,7 @@ app.post('/addproduct', async (req, res) => {
         new_price: req.body.new_price,
         old_price: req.body.old_price,
     });
-    console.log(new_product);
+    console.log("this one",new_product);
     await new_product.save();
     console.log("Product Saved")
     res.status(200).json({
