@@ -20,38 +20,60 @@ const AddProduct = () => {
         setImage(e.target.files[0]);
     }
 
-
     const Add_Product = async () => {
         console.log(newProduct);
         let responseData;
         let product = newProduct;
-
         let formData = new FormData();
         formData.append('product', image);
         console.log(formData)
 
         try {
 
-            const response = await fetch('http://localhost:4000/upload',{
-                method:'POST',
-                headers:{
-                    Accept:'appliaction/json'
+            const response = await fetch('http://localhost:4000/upload', {
+                method: 'POST',
+                headers: {
+                    Accept: 'appliaction/json'
                 },
-                body:formData,
+                body: formData,
             });
 
-            const data =await response.json();
-            responseData=data;
+            const data = await response.json();
+            responseData = data;
             if (responseData.success) {
                 product.image = responseData.image_url;
                 console.log(product);
+
+                const response = await fetch('http://localhost:4000/addproduct', {
+                    method: 'POST',
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(product)
+                })
+
+                const data = await response.json();
+                data.success ? alert("Product Added") : alert("Failed to add Product")
+
+                // await fetch('http://localhost:4000/addproduct', {
+                //     method: 'POST',
+                //     headers: {
+                //         Accept: 'application/json',
+                //         'Content-Type': 'appliaction/json'
+                //     },
+                //     body: JSON.stringify(product)
+                // }).then((response) => {
+                //     response.json()
+                // }).then((data) => {
+                //     data.success ? alert("Product Added") : alert("Failed to add Product")
+                // })
             }
 
         } catch (err) {
             console.log(err);
         }
 
-        
     }
 
     return (
