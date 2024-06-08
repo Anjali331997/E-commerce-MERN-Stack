@@ -82,6 +82,13 @@ app.post('/deleteproduct',async (req,res)=>{
     })
 })
 
+//creating api to all product from our database
+app.get('/allproducts',async(req,res)=>{
+    let products = await Product.find({});
+    console.log("all products fetched")
+    res.status(200).json(products)
+})
+
 app.listen(port, () => {
     console.log("Listening to port:", port)
 })
