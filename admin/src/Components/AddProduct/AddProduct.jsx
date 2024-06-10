@@ -4,13 +4,14 @@ import upload_area from '../../assets/upload_area.svg'
 
 const AddProduct = () => {
     const [image, setImage] = useState(false)
-    const [newProduct, setnewProduct] = useState({
+    const initialState = {
         name: "",
         image: "",
         category: "women",
         old_price: 0,
         new_price: 0
-    })
+    }
+    const [newProduct, setnewProduct] = useState(initialState)
 
     const changeHandler = (e) => {
         setnewProduct({ ...newProduct, [e.target.name]: e.target.value })
@@ -54,20 +55,12 @@ const AddProduct = () => {
                 })
 
                 const data = await response.json();
-                data.success ? alert("Product Added") : alert("Failed to add Product")
-
-                // await fetch('http://localhost:4000/addproduct', {
-                //     method: 'POST',
-                //     headers: {
-                //         Accept: 'application/json',
-                //         'Content-Type': 'appliaction/json'
-                //     },
-                //     body: JSON.stringify(product)
-                // }).then((response) => {
-                //     response.json()
-                // }).then((data) => {
-                //     data.success ? alert("Product Added") : alert("Failed to add Product")
-                // })
+                if (data.success) {
+                    alert("Product Added")
+                    setnewProduct(initialState)
+                } else {
+                    alert("Failed to add Product");
+                }
             }
 
         } catch (err) {
