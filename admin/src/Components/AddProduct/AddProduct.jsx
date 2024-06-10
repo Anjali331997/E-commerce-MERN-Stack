@@ -8,8 +8,9 @@ const AddProduct = () => {
         name: "",
         image: "",
         category: "women",
-        old_price: 0,
-        new_price: 0
+        old_price: '',
+        new_price: '',
+        description:'',
     }
     const [newProduct, setnewProduct] = useState(initialState)
 
@@ -57,7 +58,8 @@ const AddProduct = () => {
                 const data = await response.json();
                 if (data.success) {
                     alert("Product Added")
-                    setnewProduct(initialState)
+                    setnewProduct(initialState);
+                    setImage(false)
                 } else {
                     alert("Failed to add Product");
                 }
@@ -75,6 +77,14 @@ const AddProduct = () => {
                 <p>Product Name</p>
                 <input value={newProduct.name} onChange={changeHandler} type="text" name='name' placeholder='Enter product name' />
             </div>
+            <div className="addproduct-itemfield">
+                <p>Product category</p>
+                <select value={newProduct.category} name="category" id="" className='add-product-selector' onChange={changeHandler} >
+                    <option value="women">Women</option>
+                    <option value="men">Men</option>
+                    <option value="kid">Kid</option>
+                </select>
+            </div>
             <div className='addproduct-price'>
                 <div className="addproduct-itemfield">
                     <p>Product actual price</p>
@@ -85,13 +95,9 @@ const AddProduct = () => {
                     <input value={newProduct.new_price} type="text" name='new_price' placeholder='Enter new price' onChange={changeHandler} />
                 </div>
             </div>
-            <div className="addproduct-itemfield">
-                <p>Product category</p>
-                <select value={newProduct.category} name="category" id="" className='add-product-selector' onChange={changeHandler} >
-                    <option value="women">Women</option>
-                    <option value="men">Men</option>
-                    <option value="kid">Kid</option>
-                </select>
+            <div className='addproduct-itemfield'>
+            <p>Description</p>
+            <textarea rows="4" cols="70" name="description" id="description" placeholder='Description' onChange={changeHandler} value={newProduct.description}></textarea>
             </div>
             <div className="addproduct-itemfield">
                 <label htmlFor="file-input">

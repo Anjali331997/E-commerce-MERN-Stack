@@ -12,7 +12,17 @@
     color: var(--grey);
     font-size: 16px;
 }
-
+.addproduct-itemfield textarea{
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 10px;
+    border: 1px solid ;
+    outline: none;
+    color: var(--grey);
+    font-family: "Poppins";
+    font-size: 14px;  
+}
 .addproduct-itemfield input{
     box-sizing: border-box;
     width: 100%;
