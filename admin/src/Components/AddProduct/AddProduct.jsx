@@ -58,7 +58,7 @@ const AddProduct = () => {
                 const data = await response.json();
                 if (data.success) {
                     alert("Product Added")
-                    setnewProduct(initialState);
+                    // setnewProduct(initialState);
                     setImage(false)
                 } else {
                     alert("Failed to add Product");
