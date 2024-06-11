@@ -31,7 +31,6 @@ const upload = multer({ storage: storage })
 //Creating upload Endpoint for images
 app.use('/images', express.static('upload/images'))
 app.post("/upload", upload.single('product'), (req, res) => {
-    console.log(req);
     res.json({
         success: 1,
         image_url: `http://localhost:${port}/images/${req.file.filename}`,
@@ -64,8 +63,8 @@ app.post('/addproduct', async (req, res) => {
         category: req.body.category,
         new_price: req.body.new_price,
         old_price: req.body.old_price,
+        description:req.body.description
     });
-    console.log("this one",new_product);
     await new_product.save();
     console.log("Product Saved")
     res.status(200).json({

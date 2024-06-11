@@ -5,6 +5,10 @@ const productSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    image: {
+        type: String,
+        required: true
+    },
     name: {
         type: String,
         required: true
@@ -24,11 +28,15 @@ const productSchema = new mongoose.Schema({
     date: {
         type: Date,
         default: Date.now,
+    },
+    description:{
+        type:String,
+        require:true
     }
     ,
     available: {
-        type:Boolean,
-        default:true
+        type: Boolean,
+        default: true
     }
 })
 
