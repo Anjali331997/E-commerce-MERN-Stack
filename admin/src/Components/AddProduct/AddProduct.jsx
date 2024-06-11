@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './AddProduct.css'
 import upload_area from '../../assets/upload_area.svg'
+// import 'dotenv/config'
 
 const AddProduct = () => {
     const [image, setImage] = useState(false)
@@ -10,10 +11,10 @@ const AddProduct = () => {
         category: "women",
         old_price: '',
         new_price: '',
-        description:'',
+        description: '',
     }
     const [newProduct, setnewProduct] = useState(initialState)
-
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
     const changeHandler = (e) => {
         setnewProduct({ ...newProduct, [e.target.name]: e.target.value })
     }
@@ -32,7 +33,7 @@ const AddProduct = () => {
 
         try {
 
-            const response = await fetch('http://localhost:4000/upload', {
+            const response = await fetch(`${BACKEND_URL}/upload`, {
                 method: 'POST',
                 headers: {
                     Accept: 'appliaction/json'
@@ -46,7 +47,7 @@ const AddProduct = () => {
                 product.image = responseData.image_url;
                 console.log(product);
 
-                const response = await fetch('http://localhost:4000/addproduct', {
+                const response = await fetch(`${BACKEND_URL}/addproduct`, {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
@@ -96,8 +97,8 @@ const AddProduct = () => {
                 </div>
             </div>
             <div className='addproduct-itemfield'>
-            <p>Description</p>
-            <textarea rows="4" cols="70" name="description" id="description" placeholder='Description' onChange={changeHandler} value={newProduct.description}></textarea>
+                <p>Description</p>
+                <textarea rows="4" cols="70" name="description" id="description" placeholder='Description' onChange={changeHandler} value={newProduct.description}></textarea>
             </div>
             <div className="addproduct-itemfield">
                 <label htmlFor="file-input">

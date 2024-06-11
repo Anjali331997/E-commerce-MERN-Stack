@@ -4,20 +4,25 @@ import cross_icon from '../../assets/cross_icon.png'
 
 const ListProduct = () => {
   const [allproducts, setAllproducts] = useState([]);
+  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
+  console.log(BACKEND_URL)
   const fetchInfo = async () => {
     try {
-      const response = await fetch('http://localhost:4000/allproducts');
+      const response = await fetch(`${BACKEND_URL}/allproducts`);
+      console.log(response);
       const data = await response.json();
+      console.log(data)
       setAllproducts(data);
     } catch (err) {
       console.log(err)
     }
   }
+  
   const remove_product = async(id)=>{
     console.log(id)
     try {
-      await fetch('http://localhost:4000/deleteproduct',{
+      await fetch(`${BACKEND_URL}/deleteproduct`,{
         method:'POST',
         headers:{
           Accept:"application/json",
@@ -48,8 +53,8 @@ const ListProduct = () => {
       <div className="listproduct-allproducts">
         <hr />
         {allproducts.map((product, index) => {
-          return <>
-            <div key={index} className='listproduct-format-main listproduct-format'>
+          return <div key={index}>
+            <div  className='listproduct-format-main listproduct-format'>
               <img src={product.image} alt="" className='listproduct-product-icon' />
               <p>{product.name}</p>
               <p>${product.old_price}</p>
@@ -60,7 +65,7 @@ const ListProduct = () => {
               }} className='listproduct-remove-icon' src={cross_icon} alt="" />
             </div>
             <hr />
-          </>
+          </div>
         })}
       </div>
     </div>
