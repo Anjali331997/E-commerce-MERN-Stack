@@ -1,12 +1,16 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import './ProductDisplay.css'
-import {ShopContext} from '../../Context/ShopContext'
+import { ShopContext } from '../../Context/ShopContext'
 import start_icon from '../Assests/star_icon.png'
 import start_dull_icon from '../Assests/star_dull_icon.png'
 
 const ProductDisplay = ({ product }) => {
+  const [selectedSize, setSize] = useState(null);
 
-  const {addToCart} = useContext(ShopContext);
+  const handleSizeChange = (s) => {
+    setSize(s);
+  }
+  const { addToCart } = useContext(ShopContext);
   return (
     <div className='product-display'>
       <div className="product-display-left">
@@ -17,12 +21,12 @@ const ProductDisplay = ({ product }) => {
           <img src={product.image} alt="product-img" />
         </div>
         <div className="product-display-img">
-        <img src={product.image}
-         className='product-display-main-img'
-          alt="" />
+          <img src={product.image}
+            className='product-display-main-img'
+            alt="" />
+        </div>
       </div>
-      </div>
-      
+
       <div className="product-display-right">
         <h1>{product.name}</h1>
         <div className="product-display-right-stars">
@@ -51,21 +55,27 @@ const ProductDisplay = ({ product }) => {
         <div className="product-display-right-size">
           <h1>Select Size</h1>
           <div className="product-display-right-sizes">
-            <div>S</div>
-            <div>M</div>
-            <div>L</div>
-            <div>XL</div>
-            <div>XXL</div>
+            {
+              ['S', 'M', 'L', 'XL', 'XXL'].map((size) => {
+                return <div key={size}
+                  onClick={()=>handleSizeChange(size)}
+                  className={selectedSize === size ? 'selected-size':''}
+                  >
+                  {size}
+                </div>
+              })
+            }
           </div>
         </div>
-        <button onClick={()=>{
-          addToCart(product.id)
+        <button onClick={() => {
+          selectedSize ? addToCart(product.id) : alert('Please select the size')
+
         }}>Add to cart</button>
         <p className='product-display-right-category'>
-         <span> Category: </span>{product.category}, Cotten, Streachable
+          <span> Category: </span>{product.category}, Cotten, Streachable
         </p>
         <p className='product-display-right-category'>
-         <span>Tags: </span>Modern, Latest
+          <span>Tags: </span>Modern, Latest
         </p>
       </div>
     </div>

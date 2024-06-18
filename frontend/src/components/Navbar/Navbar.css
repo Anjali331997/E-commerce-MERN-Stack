@@ -11,11 +11,16 @@
     align-items: center;
     gap: 10px;
 }
+.nav-logo img{
+    width: 150px;
+}
 
 .nav-logo p {
-    color: var(--black);
+    color: var(--brandlogocolor);
     font-size: 38px;
     font-weight: 600;
+    font-family: "Style Script", cursive;
+    font-style: italic;
 }
 
 .nav-menu {
@@ -106,7 +111,7 @@
     }
 
     .nav-logo img {
-        width: 30px;
+        width: 60px;
     }
 
     .nav-logo p {
@@ -140,7 +145,7 @@
     }
 
     .nav-logo img {
-        width: 30px;
+        width: 50px;
     }
 
     .nav-logo p {

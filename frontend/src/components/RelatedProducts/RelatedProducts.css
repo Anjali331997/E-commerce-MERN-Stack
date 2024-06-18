@@ -18,6 +18,10 @@
     border: 10px;
     background:var(--grey) ;
 }
+.selected-size{
+    background: var(--brandlogocolor) !important;
+    color: var(--white);
+}
 .related-products-item{
     margin-top: 50px;
     display: flex;

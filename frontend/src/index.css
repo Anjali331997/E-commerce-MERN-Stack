@@ -19,10 +19,11 @@ code {
 }
 
 :root{
+  --brandlogocolor:#C80036;
   --black:#171717;
-  --grey:#626262;
+  --grey:#C80036;
   --white:white;
-  --red:rgb(235, 62, 62);
+  --red:#0C1844;
   --white-bg:#fbdffd;
-  --grey-light:rgb(187, 187, 187);
+  --grey-light:#FF6969;
 }

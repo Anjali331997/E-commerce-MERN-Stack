@@ -12,6 +12,9 @@
     gap: 20px;
 
 }
+.footer-logo img{
+    width: 300px;
+}
 
 .footer-logo p {
     color: var(--grey);
@@ -71,7 +74,7 @@
         align-items: end;
     }
     .footer-logo img {
-        width: 40px;
+        width: 60px;
     }
     .footer-logo p {
         font-size: 25px;
