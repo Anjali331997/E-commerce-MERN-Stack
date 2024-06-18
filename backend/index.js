@@ -116,8 +116,6 @@ app.post('/signup', async (req, res) => {
 
     await new_user.save();
     
-    
-
 })
 
 
