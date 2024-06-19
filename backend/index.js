@@ -129,7 +129,38 @@ app.post('/signup', async (req, res) => {
 
 })
 
+//userlogin
 
+app.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+    const user = await User.findOne({ email })
+    if (user) {
+        const passCompare = req.body.password === password;
+        if (passCompare) {
+            const data = {
+                user: {
+                    id: user.id
+                }
+            }
+            const token = jwt.sign(data, process.env.JWT_SECRET_KEY)
+            res.json({
+                success: true, token
+            })
+        }
+        else {
+            res.json({
+                success: false,
+                error: "Wrong password"
+            })
+        }
+    }
+    else{
+        res.json({
+            success:false,
+            errors:"Wrong email"
+        })
+    }
+})
 
 app.listen(port, () => {
     console.log("Listening to port:", port)
