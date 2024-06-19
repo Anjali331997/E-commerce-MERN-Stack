@@ -96,26 +96,37 @@ app.get('/allproducts', async (req, res) => {
 //registration
 app.post('/signup', async (req, res) => {
     const { email, name, password } = req.body;
-    let user = await User.findOne({ email})
+    let user = await User.findOne({ email })
 
-    if(user){
+    if (user) {
         return res.status(400).json({
-            success:false,
-            error:"existing user found"
+            success: false,
+            error: "existing user found"
         })
     }
 
     let cart = {};
-    for (let i = 0; i < 300;i++){
+    for (let i = 0; i < 300; i++) {
         cart[i] = 0;
     }
 
     const new_user = new User({
-        name,email,password,cart
+        name, email, password, cart
     })
 
     await new_user.save();
-    
+
+    const data = {
+        user: {
+            id: new_user.id
+        }
+    }
+
+    const token = jwt.sign(data, process.env.JWT_SECRET_KEY);
+    res.json({
+        success: true, token
+    })
+
 })
 
 
