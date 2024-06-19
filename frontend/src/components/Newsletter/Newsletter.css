@@ -48,8 +48,10 @@
     width: 210px;
     height: 70px;
     border-radius: 80px;
-    background: black;
-    color: var(--white);
+    background: var(--red);
+    color: var(--grey-light);
+    font-weight: 500;
+    font-size: 17px;
 }
 
 @media(max-width:1280px) {
